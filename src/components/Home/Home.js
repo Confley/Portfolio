@@ -1,5 +1,7 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+//! Es más eficiente la segunda forma
+import { Container, Row, Col } from "react-bootstrap"; 
+// import Container from "react-bootstrap/Container"
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -16,7 +18,7 @@ function Home() {
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
+                  👀
                 </span>
               </h1>
 
