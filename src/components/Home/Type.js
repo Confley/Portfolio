@@ -13,12 +13,10 @@ function Type() {
           "Freelancer",
           "MERN Stack Developer",
           "Software Developer",
-          "Python Developer",
-          "Trader", 
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
+        deleteSpeed: 10,
       }}
     />
   );
