@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/Home/avatar.png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -16,43 +16,30 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              LET ME <span className="blue"> INTRODUCE </span> MYSELF
             </h1>
+            
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> C++, Javascript and Go. </b>
-              </i>
+              Soy un <b className="blue"> desarrollador full-stack </b>
+              {" "} lo que significa que me encargo de todo,<b className="gray"> desde la A hasta la I de API</b>. 
+              Especialista en <b className="blue"> base de datos </b>
+              <b className="gray">porque alguien tiene que organizar todos esos datos relacionales</b>. 
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
-              </i>
+              
+              Si hay un nuevo framework no me asusta; lo más probable es que ya este 
+              en mi stack de-pendientes. <b className="blue"> Con Node, React y Firebase </b>
+              {" "} como herramientas, me enfoco en entender las necesidades técnicas y empresariales, 
+              porque nada me gusta más que hacer que el código y los negocios se sync-ronicen. 
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+              
+              <b className="blue"> Siempre estoy aprendiendo </b>, lo que me permite estar al tanto 
+              de las tendencias emergentes y aportar soluciones que son tan frescas como un commit recién hecho.
+              
             </p>
           </Col>
-          <Col md={4} className="myAvtar">
+          <Col md={3} className="myAvtar">
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>

@@ -2,7 +2,7 @@ import React from "react";
 //! Es más eficiente la segunda forma
 import { Container, Row, Col } from "react-bootstrap"; 
 // import Container from "react-bootstrap/Container"
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogo from "../../Assets/Home/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
@@ -16,15 +16,15 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
+                ¡Hola!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
-                  👀
+                  👋
                 </span>
               </h1>
 
               <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> SOUMYAJIT BEHERA</strong>
+                SOY
+                <strong className="main-name"> JOSÉ DE JESÚS</strong>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
