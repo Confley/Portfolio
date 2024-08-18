@@ -7,6 +7,17 @@ import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/Home/about.png";
 import Toolstack from "./Toolstack";
 
+
+// const title = {Quién soy <strong className="purple">YO</strong>}; 
+
+function title() {
+  return <> {"¿ Quién soy"} <strong className="purple">YO</strong> {"?"} </>; 
+}
+
+function titleSkills() {
+  return <> Conjunto de <strong className="purple">habilidades </strong> </>; 
+}
+
 function About() {
   return (
     <Container fluid className="about-section">
@@ -22,7 +33,7 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+              {title()}
             </h1>
             <Aboutcard />
           </Col>
@@ -35,16 +46,16 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
+          {titleSkills()}
         </h1>
-
+        
         <Techstack />
-
+        
         <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
         </h1>
         <Toolstack />
-
+        
         <Github />
       </Container>
     </Container>

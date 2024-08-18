@@ -2,7 +2,7 @@ html {
   --section-background-color: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
+    rgba(7, 5, 14, 0.904)
   );
 
   --image-gradient: linear-gradient(
@@ -14,7 +14,7 @@ html {
   /* --imp-text-color: #c770f0; */
   --imp-text-color: #3652d3;
   --imp-text-color-2: #3652d3;
-  --imp-text-color-3: #484F6E;
+  --imp-text-color-3: #d1d1d1;
 }
 
 .purple {
@@ -392,7 +392,7 @@ button:focus {
   height: 100%;
   border-radius: 50%;
   /* background: #68187a; */
-  background: #181a7a;
+  background: #4B5CB3;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -401,16 +401,16 @@ button:focus {
 .home-social-icons:hover::before {
   transform: scale(1.1);
   /* box-shadow: 0 0 15px #801f95; */
-  box-shadow: 0 0 15px #351f95;
+  box-shadow: 0 0 15px #4B5CB3;
 }
 
 .home-social-icons:hover {
   /* color: #87209e;
   box-shadow: 0 0 5px #87209e;
   text-shadow: 0 0 2px #87209e; */
-  color: #20289e;
-  box-shadow: 0 0 5px #20289e;
-  text-shadow: 0 0 2px #20289e;
+  color: #4B5CB3;
+  box-shadow: 0 0 5px #4B5CB3;
+  text-shadow: 0 0 2px #4B5CB3;
 }
 
 .social-icons {
@@ -421,14 +421,15 @@ button:focus {
 
 .icon-colour {
   /* color: #700c86 !important; */
-  color: #180c86 !important;
+  color: #4B5CB3 !important;
 }
 
 /* --------- */
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  /* background-color: rgb(6, 5, 31); */
+  background-color: #0E1536;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;

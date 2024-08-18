@@ -1,6 +1,36 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
+import { TbPointFilled } from "react-icons/tb";
+
+function description() {
+  return <> 
+    Buenas, yo soy <strong className="purple">José de Jesús </strong> 
+    de <strong className="purple">Aguascalientes, México</strong>
+    . Justo acabo de terminar la carrera de <strong className="purple">Ing. TIC's</strong>. 
+    <br />
+    <br />
+    Me gusta mejorar y siempre me verás <strong className="purple">aprendiendo algo nuevo</strong>.
+    <br />
+    <br />
+    Algunos de mis pasatiempos son: 
+  </>;
+}
+
+function list() {
+  return <>
+    <ul>
+      <li className="about-activity">
+        <TbPointFilled /> <strong className="purple"> Videojuegos </strong> 
+      </li>
+      <li className="about-activity">
+        <TbPointFilled /> <strong className="purple"> Resolver sudokus </strong> 
+      </li>
+      <li className="about-activity">
+        <TbPointFilled /> <strong className="purple"> Trading </strong> 
+      </li>
+    </ul>
+  </>
+}
 
 function AboutCard() {
   return (
@@ -8,30 +38,12 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Soumyajit Behera </span>
-            from <span className="purple"> Bhubaneswar, India.</span>
-            <br />
-            I am currently employed as a software developer at Juspay.
-            <br />
-            I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-            Mesra.
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
+            {description()}
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
-          </ul>
-
-          <p style={{ color: "rgb(155 126 172)" }}>
+          
+          {list()}
+          
+          <p style={{ color: "#b6bfd3" }}>
             "Strive to build things that make a difference!"{" "}
           </p>
           <footer className="blockquote-footer">Soumyajit</footer>

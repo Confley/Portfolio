@@ -21,17 +21,17 @@ function Home() {
                   👋
                 </span>
               </h1>
-
+              
               <h1 className="heading-name">
                 SOY
                 <strong className="main-name"> JOSÉ DE JESÚS</strong>
               </h1>
-
+              
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
             </Col>
-
+            
             <Col md={5} style={{ paddingBottom: 20 }}>
               <img
                 src={homeLogo}

@@ -1,69 +1,57 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiMongodb,
   DiPython,
-  DiGit,
   DiJava,
 } from "react-icons/di";
-import {
-  SiRedis,
-  SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+import { SiMysql, SiFirebase } from "react-icons/si";
+import { FiGithub } from "react-icons/fi";
+import { FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { DiSqllite } from "react-icons/di";
+
+/*
+1. Frontend Development
+  React.js
+  HTML
+  CSS
+  JavaScript
+2. Backend Development
+  Node.js
+  Firebase
+  SQL Lite
+  MySQL
+3. Programming Languages
+  Java
+  Python
+4. Version Control & Collaboration
+  GitHub
+*/
+
+const techStackIcons = [
+  { icon: <DiReact />,      tooltip: "React.js",  },
+  { icon: <FaHtml5 />,      tooltip: "HTML",      },
+  { icon: <FaCss3Alt />,    tooltip: "CSS",       },
+  { icon: <DiJavascript1 />,tooltip: "JavaScript",},
+  { icon: <DiNodejs />,     tooltip: "Node.js",   },
+  { icon: <DiSqllite />,    tooltip: "SQLite",    },
+  { icon: <SiFirebase />,   tooltip: "Firebase",  },
+  { icon: <SiMysql />,      tooltip: "MySQL",     },
+  { icon: <DiJava />,       tooltip: "Java",      },
+  { icon: <DiPython />,     tooltip: "Python",    },
+  { icon: <FiGithub />,     tooltip: "GitHub",    },
+];
 
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
+      {techStackIcons.map(({ icon, tooltip }, key) => (
+        <Col key={key} xs={4} md={2} className="tech-icons" title={tooltip}>
+          {icon}
+        </Col>
+      ))}
     </Row>
   );
 }
