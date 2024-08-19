@@ -13,7 +13,6 @@ function Github() {
         {title()}
       </h1>
       <GitHubCalendar
-        key={Math.random()}  // Forzar recreación del componente
         username="Confley"
         blockSize={15}
         blockMargin={5}

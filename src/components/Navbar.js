@@ -19,7 +19,7 @@ function NavBar() {
   const home = "Inicio"; 
   const about = "Sobre mi";
   const projects = "Proyectos";
-  const resume = "Resume";
+  const resume = "Resumen";
   // const Blog = "Blog";
   
   const [expand, updateExpanded] = useState(false);

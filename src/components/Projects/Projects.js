@@ -9,16 +9,22 @@ import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
+function title() {
+  return <>
+    <strong className="purple">Trabajos </strong> más recientes
+  </>
+}
+
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          {title()}
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Algunos de mis proyectos más recientes
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
