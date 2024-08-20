@@ -3,19 +3,6 @@ import { Container, Row } from "react-bootstrap";
 import Particle from "../Particle";
 import GassProjectCards from "./GlassProjectCards";
 
-const firebase   = {name: "firebase",  variant: "warning"}; 
-const mysql      = {name: "mysql",     variant: "primary"}; 
-const sqlLite    = {name: "sqlLite",   variant: "primary"}; 
-const node       = {name: "node",      variant: "success"}; 
-const express    = {name: "express",   variant: "dark"}; 
-const react      = {name: "react",     variant: "light"}; 
-const html       = {name: "html",      variant: "warning"}; 
-const css        = {name: "css",       variant: "info"}; 
-const javaScript = {name: "javaScript",variant: "warning"}; 
-const python     = {name: "python",    variant: "primary"}; 
-const java       = {name: "java",      variant: "light"}; 
-const github     = {name: "github",    variant: "dark"}; 
-
 function title() {
   return (
     <>
@@ -25,7 +12,7 @@ function title() {
 }
 
 function subTitle() {
-  return <>Algunos de mis proyectos más recientes</>;
+  return <>Algunos de mis proyectos</>;
 }
 
 const projects = [
@@ -36,7 +23,7 @@ const projects = [
     imgUrl: "https://picsum.photos/250/200/?random=1",
     isBlog: false,
     link: "https://leaf-plant-care.herokuapp.com/",
-    techs: [firebase, node, react, sqlLite],
+    techs: ["Firebase", "Node", "React", "SqlLite"],
   },
   {
     title: "Emotion Detection",
@@ -45,7 +32,7 @@ const projects = [
     imgUrl: "https://picsum.photos/250/200/?random=2",
     isBlog: false,
     link: "https://emotion-detection.herokuapp.com/",
-    techs: [firebase, mysql, express, python],
+    techs: ["firebase", "mysql", "express", "python"],
   },
   {
     title: "Code Editor",
@@ -54,7 +41,7 @@ const projects = [
     imgUrl: "https://picsum.photos/250/200/?random=3",
     isBlog: false,
     link: "https://code-editor-frontend.herokuapp.com/",
-    techs: [firebase, html, css, javaScript],
+    techs: ["firebase", "html", "css", "javaScript"],
   },
   {
     title: "Chat Application",
@@ -63,7 +50,7 @@ const projects = [
     imgUrl: "https://picsum.photos/250/200/?random=4",
     isBlog: false,
     link: "https://chatify-frontend.herokuapp.com/",
-    techs: [firebase, github, java],
+    techs: ["firebase", "github", "java"],
   },
   {
     title: "Suicide Prevention",
@@ -72,7 +59,7 @@ const projects = [
     imgUrl: "https://picsum.photos/250/200/?random=5",
     isBlog: false,
     link: "https://suicide-prevention.herokuapp.com/",
-    techs: [firebase],
+    techs: ["firebase"],
   },
   {
     title: "Blog",
@@ -81,7 +68,7 @@ const projects = [
     imgUrl: "https://picsum.photos/250/200/?random=6",
     isBlog: false,
     link: "https://blog-frontend.herokuapp.com/",
-    techs: [firebase],
+    techs: ["firebase"],
   },
 ];
 

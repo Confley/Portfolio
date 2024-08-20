@@ -22,7 +22,7 @@ html {
 }
 
 .blue {
-  color: var(--imp-text-color-2) !important; 
+  color: var(--imp-text-color-2) !important;
 }
 
 .gray {
@@ -172,7 +172,7 @@ button:focus {
 
 .logo {
   height: 1.8em !important;
-  width:  1.8em !important;
+  width: 1.8em !important;
 }
 
 .navbar-nav .nav-link {
@@ -392,7 +392,7 @@ button:focus {
   height: 100%;
   border-radius: 50%;
   /* background: #68187a; */
-  background: #4B5CB3;
+  background: #4b5cb3;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -401,16 +401,16 @@ button:focus {
 .home-social-icons:hover::before {
   transform: scale(1.1);
   /* box-shadow: 0 0 15px #801f95; */
-  box-shadow: 0 0 15px #4B5CB3;
+  box-shadow: 0 0 15px #4b5cb3;
 }
 
 .home-social-icons:hover {
   /* color: #87209e;
   box-shadow: 0 0 5px #87209e;
   text-shadow: 0 0 2px #87209e; */
-  color: #4B5CB3;
-  box-shadow: 0 0 5px #4B5CB3;
-  text-shadow: 0 0 2px #4B5CB3;
+  color: #4b5cb3;
+  box-shadow: 0 0 5px #4b5cb3;
+  text-shadow: 0 0 2px #4b5cb3;
 }
 
 .social-icons {
@@ -421,7 +421,7 @@ button:focus {
 
 .icon-colour {
   /* color: #700c86 !important; */
-  color: #4B5CB3 !important;
+  color: #4b5cb3 !important;
 }
 
 /* --------- */
@@ -429,7 +429,7 @@ button:focus {
 /* --------- */
 .footer {
   /* background-color: rgb(6, 5, 31); */
-  background-color: #0E1536;
+  background-color: #0e1536;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -801,8 +801,8 @@ button:focus {
 
 .glassCard .box {
   position: relative;
-  width: 320px;
-  height: 480px;
+  width: 300px;
+  height: 440px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -811,11 +811,12 @@ button:focus {
 }
 
 .content {
-  height: 350px;
+  height: 80%;
+  width: 100%;
 }
 
 .glassCard .box::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50px;
@@ -828,7 +829,7 @@ button:focus {
 }
 
 .glassCard .box::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50px;
@@ -847,11 +848,13 @@ button:focus {
   transform: skewX(0deg);
   left: 20px;
   width: calc(100% - 90px);
+  /* color: #000000;  */
 }
 
 .glassCard .box:before,
 .glassCard .box:after {
-  background: linear-gradient(315deg, #03a9f4, #ff0058);
+  /* background: linear-gradient(315deg, #03a9f4, #ff0058); */
+  background: linear-gradient(315deg, #112046, #4340ca);
 }
 
 .glassCard .box span {
@@ -866,60 +869,60 @@ button:focus {
 }
 
 .glassCard .box span::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: 0.5s;
   animation: animate 2s ease-in-out infinite;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .glassCard .box:hover span::before {
-top: -50px;
-left: 50px;
-width: 100px;
-height: 100px;
-opacity: 1;
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
 }
 
 .glassCard .box span::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: 0.5s;
   animation: animate 2s ease-in-out infinite;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   animation-delay: -1s;
 }
 
 .glassCard .box:hover span::after {
-bottom: -50px;
-right: 50px;
-width: 100px;
-height: 100px;
-opacity: 1;
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
 }
 
 @keyframes animate {
-  0%,100% {
-      transform: translateY(10px);
+  0%, 100% {
+    transform: translateY(10px);
   }
   50% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
 
@@ -927,8 +930,8 @@ opacity: 1;
   position: relative;
   left: 0;
   padding: 20px 40px;
-  background: rgba(255,255,255,0.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   backdrop-filter: blur(10px);
   z-index: 1;
@@ -942,30 +945,70 @@ opacity: 1;
   height: 420px;
 }
 
-.glassCard .box .content h2 {
-  font-size: 2em;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.content.box .content p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  line-height: 1.4em;
-}
-
-.glassCard.box .content a {
-  display: inline-block;
-  font-size: 1.1em;
-  color: #111;
-  background: #fff;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 700;
-  margin-top: 5px;
-}
-
 .card-techs {
   text-align: left;
+}
+
+.glassCard .box h4 {
+  font-size: 1.3em;
+}
+
+
+.glassCard .box .card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.glassCard .box .card-img,
+.glassCard .box .card-description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.glassCard .box .card-techs {
+  position: absolute;
+  bottom: 0%; 
+  padding-bottom: 5px; 
+}
+
+.glassCard .box p {
+  margin: 20px; 
+}
+
+.glassCard .box .card-img, 
+.glassCard .box .card-techs
+ {
+  opacity: 1;
+  visibility: visible;
+}
+
+.glassCard .box .card-description {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.glassCard .box:hover .card-img,
+.glassCard .box:hover .card-techs 
+{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.glassCard .box:hover .card-description {
+  opacity: 1;
+  visibility: visible;
+  animation: fade 1s forwards;
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
