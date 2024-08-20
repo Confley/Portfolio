@@ -33,7 +33,7 @@ function Home2() {
               <br />
               <br />
               
-              <b className="blue"> Siempre estoy aprendiendo </b>, lo que me permite estar al tanto 
+              <b className="blue"> Siempre estoy aprendiendo</b>, lo que me permite estar al tanto 
               de las tendencias emergentes y aportar soluciones <span className="gray"> que son tan frescas como un commit recién hecho</span>.
               
             </p>

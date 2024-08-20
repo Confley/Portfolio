@@ -1,100 +1,110 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
+import { Container, Row } from "react-bootstrap";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import GassProjectCards from "./GlassProjectCards";
+
+const firebase   = {name: "firebase",  variant: "warning"}; 
+const mysql      = {name: "mysql",     variant: "primary"}; 
+const sqlLite    = {name: "sqlLite",   variant: "primary"}; 
+const node       = {name: "node",      variant: "success"}; 
+const express    = {name: "express",   variant: "dark"}; 
+const react      = {name: "react",     variant: "light"}; 
+const html       = {name: "html",      variant: "warning"}; 
+const css        = {name: "css",       variant: "info"}; 
+const javaScript = {name: "javaScript",variant: "warning"}; 
+const python     = {name: "python",    variant: "primary"}; 
+const java       = {name: "java",      variant: "light"}; 
+const github     = {name: "github",    variant: "dark"}; 
 
 function title() {
-  return <>
-    <strong className="purple">Trabajos </strong> más recientes
-  </>
+  return (
+    <>
+      <strong className="purple">Trabajos </strong> más recientes
+    </>
+  );
 }
+
+function subTitle() {
+  return <>Algunos de mis proyectos más recientes</>;
+}
+
+const projects = [
+  {
+    title: "Leaf - Plant Care",
+    description:
+      "Leaf is a web application that allows users to monitor and control their plants' watering schedules. It uses a local database to store information about the plants, and a web interface to allow users to interact with the plants.",
+    imgUrl: "https://picsum.photos/250/200/?random=1",
+    isBlog: false,
+    link: "https://leaf-plant-care.herokuapp.com/",
+    techs: [firebase, node, react, sqlLite],
+  },
+  {
+    title: "Emotion Detection",
+    description:
+      "Emotion is a web application that uses the Clarifai API to detect the emotion of people in images. It can detect emotions such as happiness, sadness, fear, anger, surprise, and disgust. The application also uses a web interface to allow users to interact with the images.",
+    imgUrl: "https://picsum.photos/250/200/?random=2",
+    isBlog: false,
+    link: "https://emotion-detection.herokuapp.com/",
+    techs: [firebase, mysql, express, python],
+  },
+  {
+    title: "Code Editor",
+    description:
+      "Editor is a web application that allows users to write and edit code in a web interface. It uses the CodeMirror library to provide a rich text editor interface, and the Monaco Editor library to provide a code editor interface. The application also uses a web interface to allow users to interact with the code.",
+    imgUrl: "https://picsum.photos/250/200/?random=3",
+    isBlog: false,
+    link: "https://code-editor-frontend.herokuapp.com/",
+    techs: [firebase, html, css, javaScript],
+  },
+  {
+    title: "Chat Application",
+    description:
+      "Chatify is a web application that allows users to chat with each other in real time. It uses a web interface to allow users to interact with each other, and a local database to store information about the chat.",
+    imgUrl: "https://picsum.photos/250/200/?random=4",
+    isBlog: false,
+    link: "https://chatify-frontend.herokuapp.com/",
+    techs: [firebase, github, java],
+  },
+  {
+    title: "Suicide Prevention",
+    description:
+      "This is a web application that uses a local database to store information about suicide prevention. It uses a web interface to allow users to interact with the database, and a web hook to send notifications to users when a new entry is added to the database.",
+    imgUrl: "https://picsum.photos/250/200/?random=5",
+    isBlog: false,
+    link: "https://suicide-prevention.herokuapp.com/",
+    techs: [firebase],
+  },
+  {
+    title: "Blog",
+    description:
+      "This is a web application that uses a local database to store information about blog posts. It uses a web interface to allow users to interact with the database, and a web hook to send notifications to users when a new post is added to the database.",
+    imgUrl: "https://picsum.photos/250/200/?random=6",
+    isBlog: false,
+    link: "https://blog-frontend.herokuapp.com/",
+    techs: [firebase],
+  },
+];
 
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          {title()}
-        </h1>
-        <p style={{ color: "white" }}>
-          Algunos de mis proyectos más recientes
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
-        </Row>
+        <h1 className="project-heading">{title()}</h1>
+        <p style={{ color: "white" }}>{subTitle()}</p>
       </Container>
+
+      <Row className="glassCard">
+        {projects.map((project) => (
+          <GassProjectCards
+            title={project.title}
+            description={project.description}
+            imgPath={project.imgUrl}
+            link={project.link}
+            techs={project.techs}
+          />
+        ))}
+      </Row>
     </Container>
   );
 }
