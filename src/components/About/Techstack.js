@@ -12,24 +12,6 @@ import { FiGithub } from "react-icons/fi";
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { DiSqllite } from "react-icons/di";
 
-/*
-1. Frontend Development
-  React.js
-  HTML
-  CSS
-  JavaScript
-2. Backend Development
-  Node.js
-  Firebase
-  SQL Lite
-  MySQL
-3. Programming Languages
-  Java
-  Python
-4. Version Control & Collaboration
-  GitHub
-*/
-
 const techStackIcons = [
   { icon: <DiReact />,      tooltip: "React.js",  },
   { icon: <FaHtml5 />,      tooltip: "HTML",      },

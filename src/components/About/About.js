@@ -5,17 +5,25 @@ import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/Home/about.png";
-import Toolstack from "./Toolstack";
 
-
-// const title = {Quién soy <strong className="purple">YO</strong>}; 
+// const title = {Quién soy <strong className="purple">YO</strong>};
 
 function title() {
-  return <> {"¿ Quién soy"} <strong className="purple">YO</strong> {"?"} </>; 
+  return (
+    <>
+      {" "}
+      {"¿ Quién soy"} <strong className="purple">YO</strong> {"?"}{" "}
+    </>
+  );
 }
 
 function titleSkills() {
-  return <> Conjunto de <strong className="purple">habilidades </strong> </>; 
+  return (
+    <>
+      {" "}
+      Conjunto de <strong className="purple">habilidades </strong>{" "}
+    </>
+  );
 }
 
 function About() {
@@ -45,17 +53,10 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 className="project-heading">
-          {titleSkills()}
-        </h1>
-        
+        <h1 className="project-heading">{titleSkills()}</h1>
+
         <Techstack />
-        
-        {/* <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1> */}
-        {/* <Toolstack /> */}
-        
+
         <Github />
       </Container>
     </Container>
