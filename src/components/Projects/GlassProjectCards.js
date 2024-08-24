@@ -1,40 +1,40 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, ButtonGroup, Card } from "react-bootstrap";
 
 const GassProjectCards = (props) => {
   return (
     <>
       <div className="box">
-        <span></span>
+        {/* <span></span> */}
         <div className="content">
           <h4>{props.title}</h4>
           <hr />
           <div className="image-container">
             <Card.Img
               src={props.imgPath}
-              alt="card-img"
+              alt="project-img"
               className="card-img"
             />
-            <p className="card-description">{props.description}</p>
+            <p
+              className="card-description"
+              style={{ whiteSpace: "pre-line" }}
+            >
+              {props.description}
+            </p>
           </div>
 
           <div className="card-techs">
             {props.techs.map((tech) => {
               return (
-                <button
-                  key={tech}
+                <Button
                   disabled
-                  style={{
-                    fontSize: "12px",
-                    padding: "1px",
-                    margin: "3px",
-                    borderRadius: "5px",
-                    color: "#000000",
-                    background: getTechColor(tech),
-                  }}
+                  size="sm"
+                  className="me-2"
+                  key={tech}
+                  variant="primary"
                 >
                   {tech}
-                </button>
+                </Button>
               );
             })}
           </div>
@@ -50,29 +50,26 @@ const getTechColor = (tech) => {
   const t = tech.toLowerCase();
   switch (t) {
     case "react":
-      return "#61dafb";
+      return "#2874A6";
     case "node":
-      return "#90c53d";
+      return "#1E8449";
     case "express":
-      return "#90c53d";
+      return "#fff";
     case "mysql":
-      return "#4479A1";
+      return "#2874A6";
     case "firebase":
-      return "#FFCA28";
-    case "sqlLite":
-      return "#003B4C";
+      return "#D68910";
     case "javascript":
-    case "javaScript":
-      return "#f0db4f";
+      return "#F1C40F";
     case "python":
-      return "#306998";
+      return "#2980B9";
     case "java":
       return "#b07219";
     case "html":
-      return "#e34c26";
+      return "#D35400";
     case "css":
-      return "#1572b6";
+      return "#2980B9";
     default:
-      return "#ffff";
+      return "#7B7D7D";
   }
 };

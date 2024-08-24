@@ -9,7 +9,7 @@ import {
 } from "react-icons/di";
 import { SiMysql, SiFirebase } from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
-import { FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaNode } from "react-icons/fa";
 import { DiSqllite } from "react-icons/di";
 
 const techStackIcons = [
@@ -17,12 +17,10 @@ const techStackIcons = [
   { icon: <FaHtml5 />,      tooltip: "HTML",      },
   { icon: <FaCss3Alt />,    tooltip: "CSS",       },
   { icon: <DiJavascript1 />,tooltip: "JavaScript",},
-  { icon: <DiNodejs />,     tooltip: "Node.js",   },
-  { icon: <DiSqllite />,    tooltip: "SQLite",    },
+  { icon: <FaNode />,       tooltip: "Node.js",   },
   { icon: <SiFirebase />,   tooltip: "Firebase",  },
   { icon: <SiMysql />,      tooltip: "MySQL",     },
   { icon: <DiJava />,       tooltip: "Java",      },
-  { icon: <DiPython />,     tooltip: "Python",    },
   { icon: <FiGithub />,     tooltip: "GitHub",    },
 ];
 
