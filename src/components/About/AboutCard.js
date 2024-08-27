@@ -16,18 +16,19 @@ function description() {
   </>;
 }
 
+const hobbies = ["Videojuegos", "Resolver sudokus", "Trading", "Salir a correr"];
+
 function list() {
   return <>
     <ul>
-      <li className="about-activity">
-        <TbPointFilled /> <strong className="purple"> Videojuegos </strong> 
-      </li>
-      <li className="about-activity">
-        <TbPointFilled /> <strong className="purple"> Resolver sudokus </strong> 
-      </li>
-      <li className="about-activity">
-        <TbPointFilled /> <strong className="purple"> Trading </strong> 
-      </li>
+      {hobbies.map((hobby, index) => {
+        return (
+          <li className="about-activity" key={index}>
+            <TbPointFilled /> 
+            <strong className="purple"> {hobby} </strong>
+          </li>
+        );
+      })}
     </ul>
   </>
 }

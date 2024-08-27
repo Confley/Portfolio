@@ -14,7 +14,7 @@ html {
   /* --imp-text-color: #c770f0; */
   --imp-text-color: #3652d3;
   --imp-text-color-2: #3652d3;
-  --imp-text-color-3: #d1d1d1;
+  --imp-text-color-3: #a8a8a8;
 }
 
 .purple {
@@ -801,8 +801,9 @@ button:focus {
 
 .glassCard .box {
   position: relative;
-  width: 460px;
-  height: 500px;
+  width: 380px;
+  /* width: 100%; */
+  height: 460px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -972,25 +973,24 @@ button:focus {
   margin: 20px; 
 }
 
-.glassCard .box .card-img,
-.glassCard .box .card-techs {
+.glassCard .box .card-img {
   opacity: 1;
   visibility: visible;
 }
 
-.glassCard .box .card-description {
+.glassCard .box .card-description, 
+.glassCard .box:hover .card-techs {
   opacity: 0;
   visibility: hidden;
 }
 
-.glassCard .box:hover .card-img, 
-.glassCard .box:hover .card-techs
-{
+.glassCard .box:hover .card-img {
   opacity: 0;
   visibility: hidden;
 }
 
-.glassCard .box:hover .card-description {
+.glassCard .box:hover .card-description, 
+.glassCard .box:hover .card-techs {
   opacity: 1;
   visibility: visible;
   animation: fade 1s forwards;
@@ -1009,7 +1009,20 @@ button:focus {
 
 .glassCard .box img {
   width: 100%;
-  height: 70%;
+  height: 75%;
   border-radius: 5px;
   object-fit: cover;
+}
+
+.card-techs button {
+  background-color: rgb(0, 0, 43);
+  color: white;
+  border-radius: 5px !important;
+  font-size: smaller;
+  margin: 2px !important;
+  opacity: 0.70 !important;
+  border: 1.7px solid rgba(146, 137, 230, 0.637) !important;
+  /* display: table !important; */
+  box-shadow: 4px 5px 4px 3px rgba(7, 4, 168, 0.137) !important;
+  transition: all 0.4s ease 0s !important;
 }

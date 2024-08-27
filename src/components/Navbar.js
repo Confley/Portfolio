@@ -13,15 +13,16 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { Badge } from "react-bootstrap";
 
 function NavBar() {
-  // Titulos 
-  const home = "Inicio"; 
+  // Titulos
+  const home = "Inicio";
   const about = "Sobre mi";
   const projects = "Proyectos";
   const resume = "Resumen";
   // const Blog = "Blog";
-  
+
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -43,6 +44,12 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
+        <Navbar.Brand className="d-flex">
+          <h6>
+            <Badge bg="success">Abierto a trabajar</Badge>
+          </h6>
+        </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -54,13 +61,20 @@ function NavBar() {
           <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
+          <Nav
+            className="ms-auto"
+            defaultActiveKey="#home"
+          >
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                as={Link}
+                to="/"
+                onClick={() => updateExpanded(false)}
+              >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> {home}
               </Nav.Link>
             </Nav.Item>
-            
+
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -70,7 +84,7 @@ function NavBar() {
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> {about}
               </Nav.Link>
             </Nav.Item>
-            
+
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -83,7 +97,7 @@ function NavBar() {
                 {projects}
               </Nav.Link>
             </Nav.Item>
-            
+
             <Nav.Item>
               <Nav.Link
                 as={Link}
@@ -93,7 +107,7 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> {resume}
               </Nav.Link>
             </Nav.Item>
-            
+
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/soumyajit4419/Portfolio"
