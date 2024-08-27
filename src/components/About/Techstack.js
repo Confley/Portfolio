@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { DiJavascript1, DiReact, DiJava } from "react-icons/di";
 import { SiMysql, SiFirebase, SiXampp } from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
@@ -22,24 +22,28 @@ const techStackIcons = [
 function Techstack() {
   return (
     <>
-      <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-        {techStackIcons.map(({ icon, tooltip }, key) => (
-          <Col
-            key={key}
-            xs={4}
-            md={2}
-            className="tech-icons"
+      {techStackIcons.map(({ icon, tooltip }, index) => (
+        <Col
+          key={index}
+          md={2}
+          className="tech-icons"
+        >
+          <span
+            data-tooltip-id="tech-stack-tooltip"
+            data-tooltip-content={tooltip}
           >
-            <a
-              data-tooltip-id="my-tooltip"
-              data-tooltip-content="Hello world!"
-            >
-              {icon}
-            </a>
-          </Col>
-        ))}
-      </Row>
-      <Tooltip id="my-tooltip" />
+            {icon}
+          </span>
+        </Col>
+      ))}
+      <Tooltip
+        id="tech-stack-tooltip"
+        variant="light"
+        place="bottom"
+        style={{
+          padding: "2px",
+        }}
+      />
     </>
   );
 }

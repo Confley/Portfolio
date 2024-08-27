@@ -28,7 +28,10 @@ function titleSkills() {
 
 function About() {
   return (
-    <Container fluid className="about-section">
+    <Container
+      fluid
+      className="about-section"
+    >
       <Particle />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
@@ -50,14 +53,22 @@ function About() {
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+            <img
+              src={laptopImg}
+              alt="about"
+              className="img-fluid"
+            />
           </Col>
         </Row>
-        <h1 className="project-heading">{titleSkills()}</h1>
 
-        <Techstack />
+        <Row style={{ justifyContent: "center", paddingBottom: "80px" }}>
+          <h1 className="project-heading">{titleSkills()}</h1>
+          <Techstack />
+        </Row>
 
-        <Github />
+        <Row style={{ justifyContent: "center", paddingBottom: "80px" }}>
+          <Github />
+        </Row>
       </Container>
     </Container>
   );
