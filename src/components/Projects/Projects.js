@@ -63,8 +63,11 @@ function Projects() {
       </Container>
 
       <Row className="glassCard">
-        {projects.map((project) => (
-          <Col md={4}>
+        {projects.map((project, index) => (
+          <Col
+            md={4}
+            key={index}
+          >
             <GassProjectCards
               title={project.title}
               description={project.description}

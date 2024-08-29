@@ -1,7 +1,5 @@
 import React from "react";
-//! Es más eficiente la segunda forma
 import { Container, Row, Col } from "react-bootstrap"; 
-// import Container from "react-bootstrap/Container"
 import homeLogo from "../../Assets/Home/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";

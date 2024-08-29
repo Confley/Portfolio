@@ -4,7 +4,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { Tooltip } from "react-tooltip";
+// import { Tooltip } from "react-tooltip";
 
 function Footer() {
   const [copyMail, setcopyMail] = useState(false);
@@ -81,13 +81,13 @@ function Footer() {
           </ul>
         </Col>
       </Row>
-      <Tooltip
+      {/* <Tooltip
         id="footer-mail-tooltip"
         variant="light"
         style={{
           fontSize: "12px", padding: "2px",
         }}
-      />
+      /> */}
     </Container>
   );
 }
