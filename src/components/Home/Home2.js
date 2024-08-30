@@ -6,7 +6,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { RiWhatsappFill } from "react-icons/ri";
-// import { Tooltip } from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 function Home2() {
   const [copyMail, setCopyMail] = useState(false);
@@ -136,14 +136,14 @@ function Home2() {
           </Col>
         </Row>
       </Container>
-      {/* <Tooltip
+      <Tooltip
         id="home-mail-tooltip"
         place="bottom"
         variant="light"
         style={{
           padding: "4px",
         }}
-      /> */}
+      />
     </Container>
   );
 }

@@ -6,8 +6,6 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/Home/about.png";
 
-// const title = {Quién soy <strong className="purple">YO</strong>};
-
 function title() {
   return (
     <>

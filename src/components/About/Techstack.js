@@ -4,7 +4,7 @@ import { DiJavascript1, DiReact, DiJava } from "react-icons/di";
 import { SiMysql, SiFirebase, SiXampp } from "react-icons/si";
 import { FiGithub } from "react-icons/fi";
 import { FaHtml5, FaCss3Alt, FaNode } from "react-icons/fa";
-// import { Tooltip } from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 const techStackIcons = [
   { icon: <DiReact />, tooltip: "React.js" },
@@ -36,14 +36,14 @@ function Techstack() {
           </span>
         </Col>
       ))}
-      {/* <Tooltip
+      <Tooltip
         id="tech-stack-tooltip"
         variant="light"
         place="bottom"
         style={{
           padding: "2px",
         }}
-      /> */}
+      />
     </>
   );
 }
