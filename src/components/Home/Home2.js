@@ -6,7 +6,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { RiWhatsappFill } from "react-icons/ri";
-import { Tooltip } from "react-tooltip";
+import CustomTooltip from "../CustomTooltip";
 
 function Home2() {
   const [copyMail, setCopyMail] = useState(false);
@@ -115,35 +115,31 @@ function Home2() {
                   <RiWhatsappFill />
                 </a>
               </li>
+
               <li className="social-icons">
-                <span
-                  className="icon-colour  home-social-icons"
-                  style={{ cursor: "pointer" }}
-                  data-tooltip-id="home-mail-tooltip"
-                  data-tooltip-content={copyMail ? "Copiado" : "Copiar mail"}
-                  onClick={() => {
-                    setCopyMail(true);
-                    navigator.clipboard.writeText(
-                      "torres.esparza.95@gmail.com"
-                    );
-                    setTimeout(() => setCopyMail(false), 5000);
-                  }}
+                <CustomTooltip
+                  message={copyMail ? "Copiado" : "Copiar mail"}
+                  delay={{ hide: copyMail ? 4200 : 0 }}
                 >
-                  <SiGmail />
-                </span>
+                  <span
+                    className="icon-colour home-social-icons"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      setCopyMail(true);
+                      navigator.clipboard.writeText(
+                        "torres.esparza.95@gmail.com"
+                      );
+                      setTimeout(() => setCopyMail(false), 5000);
+                    }}
+                  >
+                    <SiGmail />
+                  </span>
+                </CustomTooltip>
               </li>
             </ul>
           </Col>
         </Row>
       </Container>
-      <Tooltip
-        id="home-mail-tooltip"
-        place="bottom"
-        variant="light"
-        style={{
-          padding: "4px",
-        }}
-      />
     </Container>
   );
 }

@@ -4,10 +4,10 @@ import { AiFillGithub } from "react-icons/ai";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { Tooltip } from "react-tooltip";
+import CustomTooltip from "./CustomTooltip";
 
 function Footer() {
-  const [copyMail, setcopyMail] = useState(false);
+  const [copyMail, setCopyMail] = useState(false);
 
   let date = new Date();
   let year = date.getFullYear();
@@ -64,30 +64,30 @@ function Footer() {
                 <RiWhatsappFill />
               </a>
             </li>
+
             <li className="social-icons">
-              <span
-                style={{ cursor: "pointer", color: "white" }}
-                data-tooltip-id="footer-mail-tooltip"
-                data-tooltip-content={copyMail ? "Copiado" : "Copiar mail"}
-                onClick={() => {
-                  setcopyMail(true);
-                  navigator.clipboard.writeText("torres.esparza.95@gmail.com");
-                  setTimeout(() => setcopyMail(false), 5000);
-                }}
+              <CustomTooltip
+                message={copyMail ? "Copiado" : "Copiar mail"}
+                placement="top"
+                delay={{ hide: copyMail ? 4200 : 0 }}
               >
-                <SiGmail />
-              </span>
+                <span
+                  style={{ cursor: "pointer", color: "white" }}
+                  onClick={() => {
+                    setCopyMail(true);
+                    navigator.clipboard.writeText(
+                      "torres.esparza.95@gmail.com"
+                    );
+                    setTimeout(() => setCopyMail(false), 5000);
+                  }}
+                >
+                  <SiGmail />
+                </span>
+              </CustomTooltip>
             </li>
           </ul>
         </Col>
       </Row>
-      <Tooltip
-        id="footer-mail-tooltip"
-        variant="light"
-        style={{
-          fontSize: "12px", padding: "2px",
-        }}
-      />
     </Container>
   );
 }
