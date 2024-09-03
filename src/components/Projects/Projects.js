@@ -62,11 +62,12 @@ function Projects() {
         <p style={{ color: "white" }}>{subTitle()}</p>
       </Container>
 
-      <Row className="glassCard">
+      <Row className="glassCard p-2">
         {projects.map((project, index) => (
           <Col
-            md={4}
+            sm
             key={index}
+            className="glassCard-col p-2"
           >
             <GassProjectCards
               title={project.title}

@@ -29,7 +29,7 @@ const GassProjectCards = (props) => {
                 <button
                   disabled
                   size="sm"
-                  className="me-2"
+                  // className="me-2"
                   key={tech}
                 >
                   {tech}
