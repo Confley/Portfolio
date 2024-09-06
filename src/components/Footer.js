@@ -21,7 +21,7 @@ function Footer() {
           md="4"
           className="footer-copywright"
         >
-          <h3>Designed by Soumyajit Behera</h3>
+          <h3>Forked from soumyajit4419</h3>
         </Col>
         <Col
           md="4"
