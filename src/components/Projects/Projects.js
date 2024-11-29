@@ -2,10 +2,11 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Particle from "../Particle";
 import GassProjectCards from "./GlassProjectCards";
-import cetac from "./../../Assets/Projects/cetac05.png";
 import digitalhypeLogo from "./../../Assets/Projects/dh logo.jpeg";
 import cotprint from "./../../Assets/Projects/cotprint.png";
+import cetac from "./../../Assets/Projects/cetac05.png";
 import mql4Logo from "./../../Assets/Projects/mt4 logo.jpeg";
+import mt4Ui from "./../../Assets/Projects/interfaz mt4.png";
 
 function title() {
   return (
@@ -33,6 +34,15 @@ const projects = [
       "Desarrollo en equipo de una página web institucional. \n\n Esta página fue diseñada con la idea de dar a conocer la institución al publico. \n\n Encargado de la implementación del diseño, desarrollo de algunos apartados, desarrollo de backend y gestión de base de datos. ",
     imgUrl: cetac,
     techs: ["React", "Bootstrap", "CSS", "Node", "API Rest", "MySQL", "Xampp"],
+  },
+  {
+    title: "Interfaz para MT4",
+    description:
+      "Este proyecto nació con el objetivo de simplificar la gestión de operaciones en MetaTrader 4, ofreciendo una experiencia intuitiva y eficiente. \n\nCada función fue diseñada para facilitar el control del riesgo y la precisión en las operaciones, mejorando el flujo de trabajo del trader.",
+    imgUrl: mt4Ui,
+    techs: ["MetaTrader 4", "MQL4"],
+    page: "/metatrader-ui", 
+    // link: "https://confley.vercel.app/"
   },
   {
     title: "Indicadores y Robots",
@@ -73,7 +83,7 @@ function Projects() {
               title={project.title}
               description={project.description}
               imgPath={project.imgUrl}
-              link={project.link}
+              page={project.page}
               techs={project.techs}
             />
           </Col>

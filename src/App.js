@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import UIMT4 from "./components/Projects/MT4UI/MT4UI"; 
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +17,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import MT4UI from "./components/Projects/MT4UI/MT4UI";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -53,6 +55,10 @@ function App() {
           <Route
             path="/resume"
             element={<Resume />}
+          />
+          <Route
+            path="/metatrader-ui"
+            element={<MT4UI/>}
           />
           <Route
             path="*"

@@ -9,7 +9,6 @@ import laptopImg from "../../Assets/Home/about.png";
 function title() {
   return (
     <>
-      {" "}
       {"¿ Quién soy"} <strong className="purple">YO</strong> {"?"}{" "}
     </>
   );
@@ -18,7 +17,6 @@ function title() {
 function titleSkills() {
   return (
     <>
-      {" "}
       Conjunto de <strong className="purple">habilidades </strong>{" "}
     </>
   );

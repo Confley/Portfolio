@@ -1,11 +1,17 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const GassProjectCards = (props) => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="box">
-        {/* <span></span> */}
+      <div
+        className="box"
+        onClick={() => props.page && navigate(props.page)}
+        style={{ cursor: props.page ? "pointer" : "default" }}
+      >
         <div className="content">
           <h4>{props.title}</h4>
           <hr />
@@ -29,7 +35,6 @@ const GassProjectCards = (props) => {
                 <button
                   disabled
                   size="sm"
-                  // className="me-2"
                   key={tech}
                 >
                   {tech}

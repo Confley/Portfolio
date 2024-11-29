@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
+import miLogo from "../Assets/Navbar/Logo mini (complete).png";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -13,7 +14,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import { Badge } from "react-bootstrap";
+// import { Badge } from "react-bootstrap";
 
 function NavBar() {
   // Titulos
@@ -46,8 +47,9 @@ function NavBar() {
       <Container>
         <Navbar.Brand className="d-flex">
           <h6>
-            <Badge bg="success">Abierto a trabajar</Badge>
+            {/* <Badge bg="success">Para trabajar</Badge> */}
           </h6>
+            <img src={miLogo} alt="Confley logo" style={{ width:"45px" }}/>
         </Navbar.Brand>
 
         <Navbar.Toggle
