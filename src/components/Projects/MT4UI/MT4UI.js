@@ -35,8 +35,6 @@ const MT4UI = () => {
         fluid
         className="uimt4-section"
       >
-        <Particle />
-
         <Container>
           <Row style={{ justifyContent: "center", padding: "10px" }}>
             <Col
@@ -146,7 +144,9 @@ const MT4UI = () => {
             </h1>
             <Col
               style={{
+                display: "flex", 
                 justifyContent: "left",
+                alignContent: "left", 
                 paddingTop: "30px",
                 paddingBottom: "50px",
               }}
@@ -155,6 +155,7 @@ const MT4UI = () => {
             </Col>
           </Row>
         </Container>
+        <Particle />
       </Container>
     </>
   );
