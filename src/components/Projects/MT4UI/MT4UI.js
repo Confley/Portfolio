@@ -8,8 +8,9 @@ import Video from "./YouTubeVideo";
 import Novedad from "./Novedad";
 
 const MT4UI = () => {
-  const VideoDeYoutube = "kvn8N8HTqGE?si=rTa3Qc6OaEZ-M4c0";
+  const VideoDeYoutube = "ap6E0-rgL_U";
   // https://youtu.be/kvn8N8HTqGE?si=rTa3Qc6OaEZ-M4c0
+  // https://youtu.be/ap6E0-rgL_U
 
   const beneficios = [
     "Optimizar la gestión de riesgo",

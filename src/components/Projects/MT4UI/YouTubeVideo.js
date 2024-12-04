@@ -13,7 +13,8 @@ const Video = (props) => {
       >
         <iframe
           title={`Video explicativo - ${props.url}`}  // Asegura que sea único con la URL
-          src={`https://www.youtube.com/embed/${props.url}`}
+          // src={`https://www.youtube.com/embed/${props.url}`}
+          src={`https://www.youtube.com/embed/${props.url}?rel=0&vq=hd1080&modestbranding=1&autohide=1&showinfo=0`}
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           style={{
