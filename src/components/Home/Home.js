@@ -1,45 +1,45 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/Home/home-main.svg";
-import Particle from "../Particle";
-import Home2 from "./Home2";
-import Type from "./Type";
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import homeLogo from '../../Assets/Home/home-main.svg'
+import Particle from '../Particle'
+import Home2 from './Home2'
+import Type from './Type'
 
-function Home() {
+function Home () {
   return (
     <section>
       <Container
         fluid
-        className="home-section"
-        id="home"
+        className='home-section'
+        id='home'
       >
         <Particle />
-        <Container className="home-content">
+        <Container className='home-content'>
           <Row>
             <Col
               md={7}
-              className="home-header"
+              className='home-header'
             >
               <h1
                 style={{ paddingBottom: 15 }}
-                className="heading"
+                className='heading'
               >
-                ¡Hola!{" "}
+                ¡Hola!{' '}
                 <span
-                  className="wave"
-                  role="img"
-                  aria-labelledby="wave"
+                  className='wave'
+                  role='img'
+                  aria-labelledby='wave'
                 >
                   👋
                 </span>
               </h1>
 
-              <h1 className="heading-name">
+              <h1 className='heading-name'>
                 SOY
-                <strong className="main-name"> JOSÉ DE JESÚS</strong>
+                <strong className='main-name'> JOSÉ DE JESÚS</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: 'left' }}>
                 <Type />
               </div>
             </Col>
@@ -50,9 +50,9 @@ function Home() {
             >
               <img
                 src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                alt='home pic'
+                className='img-fluid'
+                style={{ maxHeight: '450px' }}
               />
             </Col>
           </Row>
@@ -60,7 +60,7 @@ function Home() {
       </Container>
       <Home2 />
     </section>
-  );
+  )
 }
 
-export default Home;
+export default Home
