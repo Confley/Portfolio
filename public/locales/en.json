@@ -1,0 +1,43 @@
+{
+  "home": {
+    "greeting": "¡Hello!",
+    "iam": "I AM ",
+    "type": [
+      "Ing. TIC's",
+      "Full-Stack Developer",
+      "Database Administrator",
+      "API Developer",
+      "Cybersecurity Enthusiast",
+      "Software Developer"
+    ]
+  },
+  "home2": {
+    "title1": "LET ME ",
+    "title1_1": "INTRODUCE MYSELF",
+    "sentence1": "I'm a ",
+    "sentence1_1": "full-stack developer ",
+    "sentence1_2": "which means I handle everything ",
+    "joke1": "from R to I of REST API. ",
+    "sentence2": "Database ",
+    "sentence2_1": "specialist ",
+    "joke2": "because someone has to organize those relational data. ",
+    "sentence3": "If there's a new framework, it doesn't scare me; ",
+    "joke3": "it's most likely already in my stack of dependencies. ",
+    "sentence4": "With Node, React, and Firebase ",
+    "sentence4_1": "as tools, I focus on understanding technical and business needs, ",
+    "joke4": "because nothing makes me happier than making code and business sync-up. ",
+    "sentence5": "I'm always learning, ",
+    "sentence5_1": "which allows me to stay on top of emerging trends and provide solutions ",
+    "joke5": "that are as fresh as a newly committed code. "
+  },
+  "contact": {
+    "title": "FIND ME AT",
+    "subtext": "feel free to ",
+    "strongText": "connect ",
+    "subtext_1": "whit me"
+  }, 
+  "tools": {
+    "copyMail": "Copy email", 
+    "copied": "Copied"
+  }
+}

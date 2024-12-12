@@ -1,0 +1,43 @@
+{
+  "home": {
+    "greeting": "¡Hola!",
+    "iam": "SOY ",
+    "type": [
+      "Ing. TIC's",
+      "Desarrollador Full-Stack",
+      "Administrador de Bases de datos",
+      "Desarrollador de API REST",
+      "Entusiasta de la Ciberseguridad",
+      "Desarrollador de Software"
+    ]
+  },
+  "home2": {
+    "title1": "PERMÍTEME ",
+    "title1_1": "PRESENTARME",
+    "sentence1": "Soy un ",
+    "sentence1_1": "desarrollador full-stack ",
+    "sentence1_2": "lo que significa que me encargo de todo, ",
+    "joke1": "desde la A hasta la T de API REST. ",
+    "sentence2": "Especialista en ",
+    "sentence2_1": "base de datos ",
+    "joke2": "porque alguien tiene que organizar esos datos relacionales. ",
+    "sentence3": "Si hay un nuevo frameork no me asusta; ",
+    "joke3": "lo más probable es qeu ya este en mi stack de-pendientes. ",
+    "sentence4": "Con Node, React y Firebase ",
+    "sentence4_1": "como herramientas, me enfoco en entender las necesidades técnicas y empresariales, ",
+    "joke4": "porque nada me gusta más que hacer que el código y los negocioes se sync-ronicen. ",
+    "sentence5": "Siempre estoy aprendiendo, ",
+    "sentence5_1": "lo que me permite estar al tanto de las tendencias emergentes y aportar soluciones ",
+    "joke5": "que son tan frescas como un commit recién hecho. "
+  },
+  "contact": {
+    "title": "ENCUÉNTRAME EN",
+    "subtext": "Siéntete libre de ",
+    "strongText": "conectar ",
+    "subtext_1": "conmigo"
+  }, 
+  "tools": {
+    "copyMail": "Copiar mail", 
+    "copied": "Copiado"
+  }
+}

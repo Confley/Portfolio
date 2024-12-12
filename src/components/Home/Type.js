@@ -1,24 +1,21 @@
-import React from 'react'
-import Typewriter from 'typewriter-effect'
+import React from "react";
+import { useTranslation } from "react-i18next";
+import Typewriter from "typewriter-effect";
 
-function Type () {
+function Type() {
+  const { t } = useTranslation();
+  const jobTypes = t("home.type", { returnObjects: true });
+
   return (
     <Typewriter
       options={{
-        strings: [
-          "Ing. TIC's",
-          'Full-Stack Developer',
-          'Database Administrator',
-          'API Developer',
-          'Cybersecurity Enthusiast',
-          'Software Developer'
-        ],
+        strings: jobTypes,
         autoStart: true,
         loop: true,
-        deleteSpeed: 10
+        deleteSpeed: 10,
       }}
     />
-  )
+  );
 }
 
-export default Type
+export default Type;
