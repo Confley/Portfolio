@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import Particle from "../../Particle";
 import uiImg from "../../../Assets/Projects/interfaz_mt4_sin_fondo.png";
@@ -6,8 +6,16 @@ import { TbPointFilled } from "react-icons/tb";
 import Tilt from "react-parallax-tilt";
 import Video from "./YouTubeVideo";
 import Novedad from "./Novedad";
+import CustomTooltip from "../../CustomTooltip";
+import { SiGmail } from "react-icons/si";
+import { RiWhatsappFill } from "react-icons/ri";
+import { FaLinkedinIn } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import ToggleContent from "../../ToggleContent";
 
 const MT4UI = () => {
+  const [copyMail, setCopyMail] = useState(false);
+
   const VideoDeYoutube = "ap6E0-rgL_U";
   // https://youtu.be/kvn8N8HTqGE?si=rTa3Qc6OaEZ-M4c0
   // https://youtu.be/ap6E0-rgL_U
@@ -107,6 +115,17 @@ const MT4UI = () => {
               }}
             >
               <Video url={VideoDeYoutube} />
+              <p
+                style={{ paddingTop: "20px", cursor: "pointer" }}
+                className="purple"
+                onClick={() =>
+                  window.open(
+                    "https://www.mql5.com/es/market/product/128074?source=Site+Market+MT4+Utility+New+Rating006"
+                  )
+                }
+              >
+                Disponible en la market MQL5
+              </p>
             </Col>
 
             <Col
@@ -133,6 +152,72 @@ const MT4UI = () => {
             </Col>
           </Row>
 
+          <Row>
+            <Col
+              md={12}
+              className="home-about-social"
+            >
+              <p style={{ fontSize: "20px" }}>
+                ¡Tú opinión es <span className="purple">fundamental </span>para
+                seguir <span className="purple">mejorando</span> esta
+                herramienta!
+              </p>
+              <ul className="home-about-social-links">
+                <li className="social-icons">
+                  <a
+                    href="https://github.com/confley"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/josé-de-jesús-torres-esparza-5834b2286"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://wa.me/+524494605155"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <RiWhatsappFill />
+                  </a>
+                </li>
+
+                <li className="social-icons">
+                  <CustomTooltip
+                    message={copyMail ? "Copiado" : "Copiar mail"}
+                    delay={{ hide: copyMail ? 4200 : 0 }}
+                  >
+                    <span
+                      className="icon-colour home-social-icons"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        setCopyMail(true);
+                        navigator.clipboard.writeText(
+                          "torres.esparza.95@gmail.com"
+                        );
+                        setTimeout(() => setCopyMail(false), 5000);
+                      }}
+                    >
+                      <SiGmail />
+                    </span>
+                  </CustomTooltip>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+
           <Row
             style={{
               justifyContent: "left",
@@ -143,17 +228,18 @@ const MT4UI = () => {
             <h1 className="project-heading">
               Novedades y<strong className="purple"> actualizaciones </strong>
             </h1>
-            <Col
+            <Row
               style={{
-                display: "flex", 
+                display: "flex",
                 justifyContent: "left",
-                alignContent: "left", 
+                alignContent: "left",
                 paddingTop: "30px",
                 paddingBottom: "50px",
               }}
             >
-              <Novedad />
-            </Col>
+              {/* <Novedad /> */}
+              <ToggleContent />
+            </Row>
           </Row>
         </Container>
         <Particle />

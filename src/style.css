@@ -1055,3 +1055,94 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(7, 4, 168, 0.137) !important;
   transition: all 0.4s ease 0s !important;
 }
+
+.toggle-content {
+  cursor: pointer; 
+  font-size: 1.0em !important;
+  /* margin: 15px !important; */
+  padding: 20px !important;
+  opacity: 0.93 !important;
+  border: 1px solid rgba(146, 137, 230, 0.285) !important;
+  /* vertical-align: middle !important; */
+  text-align: left !important;
+  border-radius: 5px !important;
+  /* display: table !important; */
+  box-shadow: 4px 5px 4px 3px rgba(7, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+  background-color: #070c1f;
+}
+
+@media (max-width: 767px) {
+  .toggle-content {
+    margin: 10px !important;
+  }
+}
+
+.toggle-content:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+  border: 1px solid rgb(136, 115, 230) !important;
+  box-shadow: 1px 2px 1px 0px rgba(7, 4, 168, 0.137) !important;
+}
+
+.toggle-content p {
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
+.toggle-content div {
+  margin-left: 10px;
+  margin-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.toggle-content p strong {
+  border: 1px solid rgba(89, 75, 233, 0.285) !important;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  color: rgb(98, 140, 255); 
+}
+
+.toggle-content p span {
+  border: 1px solid rgba(89, 75, 233, 0.285) !important;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  color: white; 
+}
+
+.toggle-content .content {
+  font-size: 15px !important;
+  /* margin: 8px !important; */
+  /* margin-bottom: 50px !important;  */
+  padding: 5px !important;
+  border: 1px solid rgba(0, 0, 0, 0.285) !important;
+  background-color: rgba(0, 0, 0, 0.285) !important;
+  vertical-align: middle !important;
+  text-align: left !important;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+  background-color: #192350;
+  opacity: 0;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.toggle-content .animation{
+  opacity: 1;
+  visibility: visible;
+  animation: toggle 0.8s forwards;
+}
+
+@keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
