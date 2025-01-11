@@ -10,7 +10,7 @@ const GassProjectCards = (props) => {
       <div
         className='box'
         onClick={() => props.page && navigate(props.page)}
-        style={{ cursor: props.page ? 'pointer' : 'default' }}
+        style={{ cursor: props.page ? 'pointer' : 'default', backgroundColor: "red" }}
       >
         <div className='content'>
           <h4>{props.title}</h4>

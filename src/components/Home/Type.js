@@ -1,10 +1,15 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import Typewriter from "typewriter-effect";
 
 function Type() {
-  const { t } = useTranslation();
-  const jobTypes = t("home.type", { returnObjects: true });
+  const jobTypes = [
+    "Ing. TIC's",
+    "Full-Stack Developer",
+    "MERN Stack",
+    "API Developer",
+    "Database Administrator",
+    "Software Developer",
+  ];
 
   return (
     <Typewriter

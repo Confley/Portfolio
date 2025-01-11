@@ -1,6 +1,6 @@
 {
   "home": {
-    "greeting": "¡Hello!",
+    "greeting": "Hello!",
     "iam": "I AM ",
     "type": [
       "Ing. TIC's",
@@ -13,7 +13,7 @@
   },
   "home2": {
     "title1": "LET ME ",
-    "title1_1": "INTRODUCE MYSELF",
+    "title1_1": "INTRODUCE\n\nMYSELF",
     "sentence1": "I'm a ",
     "sentence1_1": "full-stack developer ",
     "sentence1_2": "which means I handle everything ",

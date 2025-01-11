@@ -6,7 +6,6 @@ import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Footer from './components/Footer'
 import Resume from './components/Resume/ResumeNew'
-import UIMT4 from './components/Projects/MT4UI/MT4UI'
 import {
   BrowserRouter as Router,
   Route,

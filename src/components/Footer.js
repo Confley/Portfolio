@@ -67,9 +67,8 @@ function Footer () {
 
             <li className='social-icons'>
               <CustomTooltip
-                message={copyMail ? 'Copiado' : 'Copiar mail'}
+                message={copyMail ? 'Copied' : 'Copy email'}
                 placement='top'
-                delay={{ hide: copyMail ? 4200 : 0 }}
               >
                 <span
                   style={{ cursor: 'pointer', color: 'white' }}

@@ -1,84 +1,81 @@
-import React, { useState } from 'react'
-import { Card, Col, Container, Row } from 'react-bootstrap'
-import Particle from '../../Particle'
-import uiImg from '../../../Assets/Projects/interfaz_mt4_sin_fondo.png'
-import { TbPointFilled } from 'react-icons/tb'
-import Tilt from 'react-parallax-tilt'
-import Video from './YouTubeVideo'
-import Novedad from './Novedad'
-import CustomTooltip from '../../CustomTooltip'
-import { SiGmail } from 'react-icons/si'
-import { RiWhatsappFill } from 'react-icons/ri'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { AiFillGithub } from 'react-icons/ai'
-import ToggleContent from '../../ToggleContent'
+import React from "react";
+import { Card, Col, Container, Row } from "react-bootstrap";
+import Particle from "../../Particle";
+import uiImg from "../../../Assets/Projects/interfaz_mt4_sin_fondo.png";
+import { TbPointFilled } from "react-icons/tb";
+import Tilt from "react-parallax-tilt";
+import Video from "./YouTubeVideo";
+import ToggleContent from "../../ToggleContent";
+import SocialMedia from "../../SocialMedia";
 
 const MT4UI = () => {
-  const [copyMail, setCopyMail] = useState(false)
-
-  const VideoDeYoutube = 'ap6E0-rgL_U'
+  // const VideoDeYoutube = "ap6E0-rgL_U";
+  const VideoDeYoutube = "wf8cAcj3Vqo";
   // https://youtu.be/kvn8N8HTqGE?si=rTa3Qc6OaEZ-M4c0
   // https://youtu.be/ap6E0-rgL_U
+  // https://www.youtube.com/watch?v=wf8cAcj3Vqo -> Inglés
+
+  const resume =
+    "UI MT4 is a tool designed to facilitate the execution of trades in MetaTrader 4. Its intuitive interface allows you to dynamically adjust Stop Loss and Take Profit and to clearly visualize the risk before executing a trade.";
 
   const beneficios = [
-    'Optimizar la gestión de riesgo',
-    'Facilitar la toma de decisiones',
-    'Mejorar la precisión en las operaciones',
-    'Proveer una experiencia interactiva',
-    'Automatizar cálculos clave'
-  ]
+    "Optimize risk management",
+    "Facilitate decision making",
+    "Improve accuracy in operations",
+    "Provide an interactive experience",
+    "Automate key calculations",
+    "Automate key calculations",
+  ];
 
   const instrucciones = [
-    "Un click en '-' para minmizar o maximizar. ",
-    "Un click en 'Sell' para cambiar entre compra y venta. ",
-    "Doble click en 'Sell' para abrir una operación. ",
-    'Usa las felchas para incrementar o decrementar el valor del lotaje',
-    "Doble click en 'Confirmar' para envíar operación. ",
-    'El porcentaje mínimo que se puede poner es 0.50%. ',
-    'Las líneas no superan un rango de distancia entre el precio y las líneas. '
-  ]
+    "One click on '-' to minimize or maximize. ",
+    "One click on 'Sell' to switch between buy and sell. ",
+    "Double click on 'Sell' to open a trade. ",
+    "Use the arrows to increase or decrease the lot value",
+    "Double click on 'Confirm' to send trade. ",
+    "The minimum percentage that can be set is 0.50%. ",
+    "The lines do not exceed a range of distance between the price and the lines. ",
+  ];
 
   return (
     <>
       <Container
         fluid
-        className='uimt4-section'
+        className="uimt4-section"
       >
         <Container>
-          <Row style={{ justifyContent: 'center', padding: '10px' }}>
+          <Row style={{ justifyContent: "center", padding: "10px" }}>
             <Col
               md={7}
               style={{
-                justifyContent: 'center',
-                paddingTop: '30px',
-                paddingBottom: '50px'
+                justifyContent: "center",
+                paddingTop: "30px",
+                paddingBottom: "50px",
               }}
             >
-              <h1 style={{ fontSize: '2.1em', paddingBottom: '20px' }}>
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
                 <>
-                  <strong className='purple'>Interfaz</strong>{' '}
-                  {' para MetaTrader 4'}
+                  User Interface to
+                  <strong className="purple"> MetaTrader 4</strong>
                 </>
               </h1>
 
-              <Card className='quote-card-view'>
+              <Card className="quote-card-view">
                 <Card.Body>
-                  <div className='blockquote mb-0'>
-                    <p style={{ textAlign: 'justify' }}>
-                      UI MT4 es una herramienta diseñada para facilitar la ejecución de operaciones en MetaTrader 4. Su interfaz intuitiva permite ajustar Stop Loss y Take Profit de forma dinámica y visualizar el riesgo de manera clara antes de ejecutar una operación.
-                    </p>
+                  <div className="blockquote mb-0">
+                    <p style={{ textAlign: "justify" }}>{resume}</p>
 
                     {beneficios.map((value, index) => {
                       return (
                         <li
-                          className='about-activity'
+                          className="about-activity"
                           key={index}
-                          style={{ padding: '5px' }}
+                          style={{ padding: "5px", fontSize: "1rem" }}
                         >
                           <TbPointFilled />
-                          <strong className='purple'> {value} </strong>
+                          <strong className="purple"> {value} </strong>
                         </li>
-                      )
+                      );
                     })}
                   </div>
                 </Card.Body>
@@ -86,64 +83,65 @@ const MT4UI = () => {
             </Col>
             <Col
               md={5}
-              style={{ paddingTop: '25px', paddingBottom: '80px' }}
-              className='about-img'
+              style={{ paddingTop: "25px", paddingBottom: "80px" }}
+              className="about-img"
             >
               <Tilt>
                 <img
                   src={uiImg}
-                  alt='about'
-                  className='img-fluid'
+                  alt="about"
+                  className="img-fluid"
                 />
               </Tilt>
             </Col>
           </Row>
 
-          <Row style={{ justifyContent: 'center', paddingBottom: '80px' }}>
-            <h1 className='project-heading'>
-              <strong className='purple'> Instrucciones </strong> de uso
+          <Row style={{ justifyContent: "center", paddingBottom: "80px" }}>
+            <h1 className="project-heading">
+              <strong className="purple"> Instructions </strong> for use
             </h1>
 
             <Col
               md={6}
               style={{
-                justifyContent: 'center',
-                paddingTop: '30px',
-                paddingBottom: '50px'
+                justifyContent: "center",
+                paddingTop: "30px",
+                paddingBottom: "50px",
               }}
             >
               <Video url={VideoDeYoutube} />
               <p
-                style={{ paddingTop: '20px', cursor: 'pointer' }}
-                className='purple'
+                style={{ paddingTop: "20px", cursor: "pointer" }}
+                className="purple"
                 onClick={() =>
                   window.open(
-                    'https://www.mql5.com/es/market/product/128074?source=Site+Market+MT4+Utility+New+Rating006'
-                  )}
+                    "https://www.mql5.com/es/market/product/128074?source=Site+Market+MT4+Utility+New+Rating006"
+                  )
+                }
               >
-                Disponible en la market MQL5
+                📦 Available in the MQL5 market 📦
               </p>
             </Col>
 
             <Col
               md={6}
               style={{
-                paddingTop: '45px',
-                paddingBottom: '50px'
+                paddingTop: "45px",
+                paddingBottom: "50px",
               }}
             >
               <>
                 {instrucciones.map((value, index) => {
                   return (
                     <li
-                      className='about-activity'
+                      className="about-activity"
                       key={index}
-                      style={{ padding: '5px' }}
+                      style={{ padding: "5px" }}
                     >
-                      <TbPointFilled className='purple' />
+                      <TbPointFilled className="purple" />
                       <strong> {value} </strong>
                     </li>
-                  )
+                  );
                 })}
               </>
             </Col>
@@ -152,89 +150,36 @@ const MT4UI = () => {
           <Row>
             <Col
               md={12}
-              className='home-about-social'
+              className="home-about-social"
             >
-              <p style={{ fontSize: '20px' }}>
-                ¡Tú opinión es <span className='purple'>fundamental </span>para
-                seguir <span className='purple'>mejorando</span> esta
-                herramienta!
+              <p style={{ fontSize: "20px" }}>
+                Your opinion is <span className="purple">essential </span>to
+                continue <span className="purple">improving </span> this tool!
               </p>
-              <ul className='home-about-social-links'>
-                <li className='social-icons'>
-                  <a
-                    href='https://github.com/confley'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='icon-colour  home-social-icons'
-                  >
-                    <AiFillGithub />
-                  </a>
-                </li>
-                <li className='social-icons'>
-                  <a
-                    href='https://www.linkedin.com/in/josé-de-jesús-torres-esparza-5834b2286'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='icon-colour  home-social-icons'
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                </li>
-                <li className='social-icons'>
-                  <a
-                    href='https://wa.me/+524494605155'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='icon-colour  home-social-icons'
-                  >
-                    <RiWhatsappFill />
-                  </a>
-                </li>
 
-                <li className='social-icons'>
-                  <CustomTooltip
-                    message={copyMail ? 'Copiado' : 'Copiar mail'}
-                    delay={{ hide: copyMail ? 4200 : 0 }}
-                  >
-                    <span
-                      className='icon-colour home-social-icons'
-                      style={{ cursor: 'pointer' }}
-                      onClick={() => {
-                        setCopyMail(true)
-                        navigator.clipboard.writeText(
-                          'torres.esparza.95@gmail.com'
-                        )
-                        setTimeout(() => setCopyMail(false), 5000)
-                      }}
-                    >
-                      <SiGmail />
-                    </span>
-                  </CustomTooltip>
-                </li>
-              </ul>
+              <SocialMedia />
             </Col>
           </Row>
 
           <Row
             style={{
-              justifyContent: 'left',
-              paddingBottom: '160px',
-              paddingTop: '100px'
+              justifyContent: "left",
+              paddingBottom: "160px",
+              paddingTop: "100px",
             }}
           >
-            <h1 className='project-heading'>
-              Novedades y<strong className='purple'> actualizaciones </strong>
+            <h1 className="project-heading">
+              News and <strong className="purple"> updates </strong>
             </h1>
             <Row
               style={{
-                display: 'flex',
-                justifyContent: 'left',
-                alignContent: 'left',
-                paddingTop: '30px',
-                paddingBottom: '50px'
+                display: "flex",
+                justifyContent: "left",
+                alignContent: "left",
+                paddingTop: "30px",
+                paddingBottom: "50px",
               }}
             >
-              {/* <Novedad /> */}
               <ToggleContent />
             </Row>
           </Row>
@@ -242,7 +187,7 @@ const MT4UI = () => {
         <Particle />
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default MT4UI
+export default MT4UI;

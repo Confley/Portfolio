@@ -1,13 +1,14 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
-import { DiJavascript1, DiReact, DiJava } from 'react-icons/di'
+import { DiJavascript1, DiReact, DiJava, DiPython, DiBootstrap } from 'react-icons/di'
 import { SiMysql, SiFirebase, SiXampp } from 'react-icons/si'
-import { FiGithub } from 'react-icons/fi'
 import { FaHtml5, FaCss3Alt, FaNode } from 'react-icons/fa'
+import { FiGithub } from 'react-icons/fi'
 import CustomTooltip from '../CustomTooltip'
 
 const techStackIcons = [
   { icon: <DiReact />, tooltip: 'React.js' },
+  { icon: <DiBootstrap />, tooltip: 'Bootstrap' },
   { icon: <FaHtml5 />, tooltip: 'HTML' },
   { icon: <FaCss3Alt />, tooltip: 'CSS' },
   { icon: <DiJavascript1 />, tooltip: 'JavaScript' },
@@ -15,6 +16,7 @@ const techStackIcons = [
   { icon: <SiFirebase />, tooltip: 'Firebase' },
   { icon: <SiMysql />, tooltip: 'MySQL' },
   { icon: <DiJava />, tooltip: 'Java' },
+  { icon: <DiPython />, tooltip: 'Python' },
   { icon: <FiGithub />, tooltip: 'GitHub' },
   { icon: <SiXampp />, tooltip: 'Xampp' }
 ]

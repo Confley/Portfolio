@@ -1081,7 +1081,7 @@ button:focus {
 
 .toggle-content:hover {
   transform: scale(1.05) !important;
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
   border: 1px solid rgb(136, 115, 230) !important;
   box-shadow: 1px 2px 1px 0px rgba(7, 4, 168, 0.137) !important;
 }

@@ -3,7 +3,7 @@ import GitHubCalendar from 'react-github-calendar'
 import { Row } from 'react-bootstrap'
 
 function title () {
-  return <> Calendario de <strong className='purple'>código </strong> </>
+  return <> Days I<strong className='purple'> code </strong> </>
 }
 
 function Github () {
