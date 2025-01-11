@@ -1068,7 +1068,6 @@ button:focus {
   border-radius: 5px !important;
   /* display: table !important; */
   box-shadow: 4px 5px 4px 3px rgba(7, 4, 168, 0.137) !important;
-  overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
   background-color: #070c1f;
 }

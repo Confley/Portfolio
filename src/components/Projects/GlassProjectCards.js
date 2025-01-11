@@ -1,51 +1,51 @@
-import React from 'react'
-import { Card } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const GassProjectCards = (props) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
       <div
-        className='box'
+        className="box"
         onClick={() => props.page && navigate(props.page)}
-        style={{ cursor: props.page ? 'pointer' : 'default', backgroundColor: "red" }}
+        style={{ cursor: props.page ? "pointer" : "default" }}
       >
-        <div className='content'>
+        <div className="content">
           <h4>{props.title}</h4>
           <hr />
-          <div className='image-container'>
+          <div className="image-container">
             <Card.Img
               src={props.imgPath}
-              alt='project-img'
-              className='card-img mt-3'
+              alt="project-img"
+              className="card-img mt-3"
             />
             <p
-              className='card-description'
-              style={{ whiteSpace: 'pre-line' }}
+              className="card-description"
+              style={{ whiteSpace: "pre-line" }}
             >
               {props.description}
             </p>
           </div>
 
-          <div className='card-techs'>
+          <div className="card-techs">
             {props.techs.map((tech) => {
               return (
                 <button
                   disabled
-                  size='sm'
+                  size="sm"
                   key={tech}
                 >
                   {tech}
                 </button>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default GassProjectCards
+export default GassProjectCards;
