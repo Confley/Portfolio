@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Particle from "../Particle";
 import GassProjectCards from "./GlassProjectCards";
+import nutlifePage from "./../../Assets/Projects/Nutlife (page).png";
 import digitalhypeLogo from "./../../Assets/Projects/dh logo.jpeg";
 import cotprint from "./../../Assets/Projects/cotprint.png";
 import cetac from "./../../Assets/Projects/cetac05.png";
@@ -21,6 +22,14 @@ function subTitle() {
 }
 
 const projects = [
+  {
+    title: "NutLife",
+    description:
+      "A landing page to promote services.\n\n- Personal trainer \n- Nutrition plan\n- Consulting \n\nThe goal is to capture the attention of customers with an attractive and minimalist design. ",
+    imgUrl: nutlifePage,
+    techs: ["Next", "React", "EmailJS", "Tailwind CSS"],
+    link: "https://nutlife.vercel.app/",
+  },
   {
     title: "Ability Gamma",
     description:

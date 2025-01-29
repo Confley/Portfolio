@@ -5,12 +5,20 @@ import { useNavigate } from "react-router-dom";
 const GassProjectCards = (props) => {
   const navigate = useNavigate();
 
+  function goToResource() {
+    if (props.link) {
+      window.open(props.link, "_blank");
+    } else if (props.page) {
+      navigate(props.page);
+    }
+  }
+
   return (
     <>
       <div
         className="box"
-        onClick={() => props.page && navigate(props.page)}
-        style={{ cursor: props.page ? "pointer" : "default" }}
+        onClick={() => goToResource()}
+        style={{ cursor: props.page || props.link ? "pointer" : "default" }}
       >
         <div className="content">
           <h4>{props.title}</h4>
